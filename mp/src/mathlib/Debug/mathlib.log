@@ -1,0 +1,44 @@
+﻿Build started 24/12/2021 17:36:14.
+     1>Project "E:\Users\Desktop\myfirstmod\mp\src\mathlib\mathlib.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\lib\public\.\mathlib.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\mathlib.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\.\mathlib.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\.\mathlib.lib
+             attrib +r ..\lib\public\.\mathlib.lib
+         )
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "mathlib.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       Lib:
+         E:\Arquivos de Programas (x86)\Nova pasta\VC\bin\Lib.exe /OUT:"..\lib\public\.\mathlib.lib" /NOLOGO  /ignore:4221 .\Debug\.\/3dnow.obj
+         .\Debug\.\/almostequal.obj
+         .\Debug\.\/anorms.obj
+         .\Debug\.\/bumpvects.obj
+         .\Debug\.\/color_conversion.obj
+         .\Debug\.\/halton.obj
+         .\Debug\.\/IceKey.obj
+         .\Debug\.\/imagequant.obj
+         .\Debug\.\/lightdesc.obj
+         .\Debug\.\/mathlib_base.obj
+         .\Debug\.\/polyhedron.obj
+         .\Debug\.\/powsse.obj
+         .\Debug\.\/quantize.obj
+         .\Debug\.\/randsse.obj
+         .\Debug\.\/simdvectormatrix.obj
+         .\Debug\.\/sparse_convolution_noise.obj
+         .\Debug\.\/spherical.obj
+         .\Debug\.\/sse.obj
+         .\Debug\.\/sseconst.obj
+         .\Debug\.\/ssenoise.obj
+         .\Debug\.\/vector.obj
+         .\Debug\.\/vmatrix.obj
+         mathlib.vcxproj -> E:\Users\Desktop\myfirstmod\mp\src\mathlib\..\lib\public\.\mathlib.lib
+     1>Done Building Project "E:\Users\Desktop\myfirstmod\mp\src\mathlib\mathlib.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.85
